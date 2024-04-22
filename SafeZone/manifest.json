@@ -12,7 +12,7 @@
     "icons": [
         {
             "sizes": "16x16",
-            "src": ".//images/AppIcons/images.icons/icons/16.png",
+            "src": "./images/AppIcons/images.icons/icons/16.png",
             "type": "image/png",
             "purpose": "any maskable"
         },
