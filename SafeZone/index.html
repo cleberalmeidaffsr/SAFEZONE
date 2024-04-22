@@ -43,5 +43,28 @@
 		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 		<script src="assets/js/map.js"></script>
+		<script src="manifest.json"></script>
+		<script src="service-worker.js"></script>
+
+		
+		<script>
+			let newWorker;
+		document.getElementById('reload').addEventListener('click', function () {
+			newWorker.postMessage({ action: 'skipWaiting' });
+		});
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./service-worker.js').then(reg => {
+				reg.addEventListener('updatefound', () => {
+					newWorker = reg.installing;
+				});
+			});
+		}
+		let refreshing;
+		navigator.serviceWorker.addEventListener('controllerchange', function () {
+			if (refreshing) return;
+			window.location.reload();
+			refreshing = true;
+		})
+		</script>
 	</body>
 </html>
