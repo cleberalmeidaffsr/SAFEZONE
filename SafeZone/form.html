@@ -4,6 +4,7 @@
 <head>
     <title>SafeZone</title>
     <meta charset="utf-8" />
+    <meta name="theme-color" content="#4D5360" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -32,7 +33,7 @@
 
         <div>
             <h2 class="title_1">Registro do risco</h2>
-            <form action="#" method="post" enctype="multipart/form-data" class="report-form">
+            <form action="https://formsubmit.co/lucass.calado2@gmail.com" method="POST" enctype="multipart/form-data" class="report-form" data-form>
                 <label for="image-upload">Upload de Imagem:</label>
                 <input type="file" id="image-upload" name="image" accept="image/*" required>
 
@@ -51,10 +52,12 @@
                     <option value="Risco 4">Risco 4</option>
                 </select>
 
-                <button class="button_form" type="submit">Relatar</button>
+                <button class="button_form" type="submit" data-button>Relatar</button>
             </form>
         </div>
 
+
+        <script src="./assets/js/form.js"></script>
     </body>
 
 </html>

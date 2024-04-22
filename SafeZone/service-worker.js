@@ -15,6 +15,7 @@ self.addEventListener('install', event =>{
                 './images/iconpin.png',
 
                 'safezone.json'
+                
 
     
 
